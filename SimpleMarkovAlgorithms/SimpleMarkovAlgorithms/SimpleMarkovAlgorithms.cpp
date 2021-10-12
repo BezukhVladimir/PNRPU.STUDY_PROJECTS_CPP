@@ -175,7 +175,7 @@ void thirdNormalMarkovAlgorithmTask()
 											  MarkovRule("*", true, "a"),
 											  MarkovRule("", false, "*") };
 
-	cout << "Введите строку для второго задания (A = {a, b}): ";
+	cout << "Введите строку для третьего задания (A = {a, b}): ";
 	normalMarkovAlgorithmTaskInterface(MARKOV_RULES);
 }
 
