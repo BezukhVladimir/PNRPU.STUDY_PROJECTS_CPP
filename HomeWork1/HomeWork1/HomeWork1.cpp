@@ -10,6 +10,14 @@
 * © Developed by Bezukh Vladimir. All right reserved.
 */
 
+/*
+* Developed by Bezukh Vladimir
+* September 2021
+* ИВТ-21-2б
+*
+* Незначительные задачи с циклами.
+*/
+
 #include <iostream>
 
 using namespace std;

@@ -10,6 +10,14 @@
 * © Developed by Bezukh Vladimir. All right reserved.
 */
 
+/*
+* Developed by Bezukh Vladimir
+* October 2021
+* ИВТ-21-2б
+*
+* Консольное приложение для применения нормального алгоритма Маркова.
+*/
+
 #include <vector>
 #include <string>
 #include <iomanip>
