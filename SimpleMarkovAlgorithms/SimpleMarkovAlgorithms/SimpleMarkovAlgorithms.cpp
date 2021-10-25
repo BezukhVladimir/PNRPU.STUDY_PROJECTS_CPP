@@ -179,11 +179,29 @@ void thirdNormalMarkovAlgorithmTask()
 	normalMarkovAlgorithmTaskInterface(MARKOV_RULES);
 }
 
+void fourthNormalMarkovAlgorithmTask()
+{
+	/*
+	* Дано:
+	* A = {a, b}.
+	* Преобразовать слово P так, чтобы все символы «a» оказались слева, а все символы «b» — справа.
+	*
+	* Решение:
+	* ba → ab
+	*/
+
+	const vector<MarkovRule> MARKOV_RULES = { MarkovRule("ba", false, "ab") };
+
+	cout << "Введите строку для четвёртого задания (A = {a, b}): ";
+	normalMarkovAlgorithmTaskInterface(MARKOV_RULES);
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	firstNormalMarkovAlgorithmTask();
-	secondNormalMarkovAlgorithmTask();
-	thirdNormalMarkovAlgorithmTask();
+	//firstNormalMarkovAlgorithmTask();
+	//secondNormalMarkovAlgorithmTask();
+	//thirdNormalMarkovAlgorithmTask();
+	fourthNormalMarkovAlgorithmTask();
 }
