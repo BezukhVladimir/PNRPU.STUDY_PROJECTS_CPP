@@ -135,8 +135,8 @@ bool playAgain()
 
 void secondTask()
 {
-	const unsigned int ATTEMPTS = 10; // количество попыток игрока
-	const int SECRET_MIN = -500, SECRET_MAX = 500; // диапазон угадывания
+	const unsigned int ATTEMPTS = 7; // количество попыток игрока
+	const int SECRET_MIN = 1, SECRET_MAX = 100; // диапазон угадывания
 	
 	do
 	{
@@ -161,6 +161,6 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	//firstTask();
+	firstTask();
 	secondTask();
 }
