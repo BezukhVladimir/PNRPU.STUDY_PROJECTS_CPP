@@ -200,8 +200,8 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	//firstNormalMarkovAlgorithmTask();
-	//secondNormalMarkovAlgorithmTask();
-	//thirdNormalMarkovAlgorithmTask();
+	firstNormalMarkovAlgorithmTask();
+	secondNormalMarkovAlgorithmTask();
+	thirdNormalMarkovAlgorithmTask();
 	fourthNormalMarkovAlgorithmTask();
 }
