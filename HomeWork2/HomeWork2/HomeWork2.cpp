@@ -37,12 +37,63 @@
 * 
 * Четвёртое задание:
 * Вывести последовательность символов в обратном порядке.
+* 
+* Пятое задание:
+* Написать программу, которая переводит температуру в градусах по Фаренгейту
+* в градусы Цельсия по формуле: 𝐶 = 5/9 * (𝐹 − 32)
+* 
+* Шестое задание:
+* Заданы два момента времени в течение дня.
+* Написать программу для нахождения промежутка времени между ними.
 */
 
 #include <string>
 #include <iostream>
 
 using namespace std;
+
+struct DayMoment
+{
+    size_t hours, mins, secs;
+    
+    size_t getAllSecs()
+    {
+        return hours * 3600 + mins * 60 + secs;
+    }
+
+    void takeAllSecs(size_t all_secs)
+    {
+        hours = all_secs / 3600; all_secs %= 3600;
+        mins  = all_secs / 60;   all_secs %= 60;
+        secs  = all_secs;
+    }
+
+    DayMoment() : hours(0), mins(0), secs(0) {}
+    DayMoment(size_t hours, size_t mins, size_t secs) : hours(hours), mins(mins), secs(secs) {}
+};
+
+DayMoment getDayMoment()
+{
+    cout << "Введите момент времени суток в часах, минутах и секундах: ";
+
+    DayMoment DAY_MOMENT; cin >> DAY_MOMENT.hours >> DAY_MOMENT.mins >> DAY_MOMENT.secs; cin.ignore();
+
+    return DAY_MOMENT;
+}
+
+float fahrenheitToCelsiusConversion(const float &FAHRENHEIT)
+{
+    return (FAHRENHEIT - 32) * 5 / 9;
+}
+
+float getFahrenheit()
+{
+    cout << "Введите число градусов Фаренгейта: ";
+
+    float FAHRENHEIT; cin >> FAHRENHEIT; cin.ignore();
+
+    return FAHRENHEIT;
+}
 
 float gallonsToCubicFeetConversion(const float &GALLONS)
 {
@@ -125,7 +176,36 @@ void fourthTask()
         cout << INPUT_STRING[i];
     }
 
-    cout << "\n";
+    cout << "\n\n";
+}
+
+void fifthTask()
+{
+    // Перевод градусов Фаренгейта в градусы Цельсия
+
+    const float FAHRENHEIT = getFahrenheit();
+
+    const float CELSIUS =
+        fahrenheitToCelsiusConversion(FAHRENHEIT);
+
+    cout << FAHRENHEIT << " градусов Фаренгейта эквивалентно " << CELSIUS << " градусам Цельсия\n\n";
+}
+
+void sixthTask() 
+{
+    // Разница между двумя моментами времени суток
+
+    cout << "Найдём промежуток между двумя моментами времени в пределах одних суток.\n\n";
+
+    DayMoment FIRST_DAY_MOMENT = getDayMoment(), SECOND_DAY_MOMENT = getDayMoment();
+    
+    DayMoment DIFF_TIME; 
+    DIFF_TIME.takeAllSecs(abs((int) (FIRST_DAY_MOMENT.getAllSecs() - SECOND_DAY_MOMENT.getAllSecs())));
+
+    cout << "\nПромежуток составляет: часов — "
+         << DIFF_TIME.hours << ", минут — "
+         << DIFF_TIME.mins  << ", секунд — "
+         << DIFF_TIME.secs  << ".\n\n";
 }
 
 int main()
@@ -136,4 +216,6 @@ int main()
     secondTask();
     thirdTask();
     fourthTask();
+    fifthTask();
+    sixthTask();
 }
