@@ -13,7 +13,7 @@
 
 /*
 * Developed by Bezukh Vladimir
-* October 2021
+* November 2021
 * ИВТ-21-2б
 * 
 * Первое задание:
@@ -55,22 +55,25 @@ using namespace std;
 struct DayMoment
 {
     size_t hours, mins, secs;
-    
-    size_t getAllSecs()
-    {
-        return hours * 3600 + mins * 60 + secs;
-    }
 
-    void takeAllSecs(size_t all_secs)
-    {
-        hours = all_secs / 3600; all_secs %= 3600;
-        mins  = all_secs / 60;   all_secs %= 60;
-        secs  = all_secs;
-    }
+    size_t getAllSecs();
+    void takeAllSecs(size_t all_secs);
 
     DayMoment() : hours(0), mins(0), secs(0) {}
     DayMoment(size_t hours, size_t mins, size_t secs) : hours(hours), mins(mins), secs(secs) {}
 };
+
+size_t DayMoment::getAllSecs() 
+{
+    return hours * 3600 + mins * 60 + secs;
+}
+
+void DayMoment::takeAllSecs(size_t all_secs)
+{
+    hours = all_secs / 3600; all_secs %= 3600;
+    mins = all_secs / 60;   all_secs %= 60;
+    secs = all_secs;
+}
 
 DayMoment getDayMoment()
 {
@@ -81,9 +84,22 @@ DayMoment getDayMoment()
     return DAY_MOMENT;
 }
 
-float fahrenheitToCelsiusConversion(const float &FAHRENHEIT)
+string getString()
 {
-    return (FAHRENHEIT - 32) * 5 / 9;
+    cout << "Введите строку символов: ";
+
+    string INPUT_STRING; getline(cin, INPUT_STRING);
+
+    return INPUT_STRING;
+}
+
+float getGallons()
+{
+    cout << "Введите число галлонов: ";
+
+    float GALLONS; cin >> GALLONS; cin.ignore();
+
+    return GALLONS;
 }
 
 float getFahrenheit()
@@ -100,22 +116,9 @@ float gallonsToCubicFeetConversion(const float &GALLONS)
     return GALLONS / 7.481f;
 }
 
-float getGallons()
+float fahrenheitToCelsiusConversion(const float &FAHRENHEIT)
 {
-    cout << "Введите число галлонов: ";
-
-    float GALLONS; cin >> GALLONS; cin.ignore();
-
-    return GALLONS;
-}
-
-string getString()
-{
-    cout << "Введите строку символов: ";
-
-    string INPUT_STRING; getline(cin, INPUT_STRING);
-
-    return INPUT_STRING;
+    return (FAHRENHEIT - 32) * 5 / 9;
 }
 
 void firstTask()
@@ -157,10 +160,10 @@ void thirdTask()
 
     cout << "Введите два числа: ";
 
-    float first_number, second_number; cin >> first_number >> second_number; cin.ignore();
+    float FIRST_NUMBER, SECOND_NUMBER; cin >> FIRST_NUMBER >> SECOND_NUMBER; cin.ignore();
 
-    cout << "Произведение чисел " << first_number << " и " << second_number
-         << " равно " << first_number * second_number << "\n\n";
+    cout << "Произведение чисел " << FIRST_NUMBER << " и " << SECOND_NUMBER
+         << " равно " << FIRST_NUMBER * SECOND_NUMBER << "\n\n";
 }
 
 void fourthTask()
@@ -172,9 +175,7 @@ void fourthTask()
     cout << "Введённая строка в обратном порядке: ";
 
     for (int i = INPUT_STRING.length() - 1; i >= 0; --i)
-    {
         cout << INPUT_STRING[i];
-    }
 
     cout << "\n\n";
 }
@@ -194,8 +195,6 @@ void fifthTask()
 void sixthTask() 
 {
     // Разница между двумя моментами времени суток
-
-    cout << "Найдём промежуток между двумя моментами времени в пределах одних суток.\n\n";
 
     DayMoment FIRST_DAY_MOMENT = getDayMoment(), SECOND_DAY_MOMENT = getDayMoment();
     
@@ -217,5 +216,5 @@ int main()
     thirdTask();
     fourthTask();
     fifthTask();
-    sixthTask();
+    sixthTask();  
 }
