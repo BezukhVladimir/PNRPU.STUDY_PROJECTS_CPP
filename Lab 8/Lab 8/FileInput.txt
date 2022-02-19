@@ -1,0 +1,6 @@
+Vladimir Bezukh Sergeevich 22 2 2000 Perm Dedyukina 20 75
+Ivan Ivanov Ivanovich 1 1 1990 Moscow Tverskaya 1 25
+Vasiliy Vasiliev Vasilievich 1 1 1990 Petersburg Komarovo 1 50
+Dmitriy Shostakovich Dmitriyevich 25 9 1906 Moscow Lubyanka 1 100
+Vasia Pupkin Ivanovich 10 10 2010 Saratov Sadovaya 42 -50
+Sergei Sergeev Sergeevich 1 1 1990 Vladivostok Lugovaya 20 25
