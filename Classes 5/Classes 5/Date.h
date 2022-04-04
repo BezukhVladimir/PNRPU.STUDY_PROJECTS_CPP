@@ -5,6 +5,10 @@
 class Date
 {
 public:
+    Date() { day_ = 1; month_ = 1; year_ = 1900; }
+    Date(unsigned short day, unsigned short month, unsigned short year) :
+        day_(day), month_(month), year_(year) {}
+
     void setDay(const unsigned int&);
     void setMonth(const unsigned int&);
     void setYear(const unsigned int&);

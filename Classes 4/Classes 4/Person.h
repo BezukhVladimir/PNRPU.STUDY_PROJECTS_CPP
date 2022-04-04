@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Date.h"
 #include "FullName.h"
 #include <iostream>

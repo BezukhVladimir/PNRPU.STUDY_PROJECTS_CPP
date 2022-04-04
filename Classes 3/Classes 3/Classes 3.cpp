@@ -24,29 +24,29 @@ int main()
 {
     Time a, b, c;
     std::cin >> a >> b; 
-    
-    ++a;
 
-    std::cout << a << '\n';
-
-    c = (a++) + b;
-
+    c = a + b;
+    std::cout << "a + b = c\n";
     std::cout << "a = " << a << '\n'; 
     std::cout << "b = " << b << '\n';
     std::cout << "c = " << c << '\n';
 
-    a.set_min(10); a.set_sec(10);
-    b.set_min(10); b.set_sec(10);
+    a.set_min(7); a.set_sec(21);
+    b.set_min(7); b.set_sec(21);
+
+    std::cout << "a and b: 7:21\n";
+    std::cout << "a = " << a << '\n';
+    std::cout << "b = " << b << '\n';
 
     if (a != b)
         std::cout << a << " <~ a != b ~> " << b;
     else
         std::cout << a << " <~ a == b ~> " << b;
 
-    a = a - b; std::cout << '\n';
+    std::cout << '\n';
 
-    if (a != b)
-        std::cout << a << " <~ a != b ~> " << b;
+    if (c != b)
+        std::cout << c << " <~ c != b ~> " << b;
     else
-        std::cout << a << " <~ a == b ~> " << b;
+        std::cout << c << " <~ c == b ~> " << b;
 }

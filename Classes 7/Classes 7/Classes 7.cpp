@@ -13,18 +13,30 @@
 
 /*
 * Developed by Bezukh Vladimir
-* Classes 4
+* Classes 7
 * ИВТ-21-2б
 */
 
-#include "Student.h"
+#include "Pair.h"
+#include "SinglyList.h"
 
 int main()
 {
-	Student Bezukh;
-	Bezukh.subjects.addSubject("Mathematics", Grade::GOOD);
-	Bezukh.subjects.addSubject("Descriptive geometry", Grade::EXCELLENT);
-	Bezukh.subjects.addSubject("Computer science", Grade::EXCELLENT);
+	Pair x = Pair(10, 20.52);
+	Pair y = Pair(15, 30.25);
+	Pair z = Pair(20, 40.43);
 
-	std::cout << Bezukh.subjects;
+	SinglyList<Pair> list;
+	list.pushBack(x);
+	list.pushBack(y);
+	list.pushBack(z);
+
+	for (const auto& v : list)
+		std::cout << v << " ";
+	std::cout << std::endl;
+
+	list * 10;
+
+	for (const auto& v : list)
+		std::cout << v << " ";
 }

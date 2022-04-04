@@ -16,6 +16,7 @@ public:
 	void clear();
 
 	friend std::ostream& operator<<(std::ostream&, const Subjects&);
+	friend std::istream& operator>>(std::istream&, Subjects&);
 
 private:
 	std::map<std::string, Grade> subjects_and_grades_;

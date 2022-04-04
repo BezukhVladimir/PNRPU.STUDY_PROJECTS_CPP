@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ac3dbc43-74b9-4b59-82b5-9f648b0fb560}</ProjectGuid>
-    <RootNamespace>Classes_4</RootNamespace>
+    <ProjectGuid>{f27bc55d-2674-4e00-9880-235a87a193f6}</ProjectGuid>
+    <RootNamespace>Classes_8</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,22 +139,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Classes 4.cpp" />
-    <ClCompile Include="Date.cpp" />
-    <ClCompile Include="FullName.cpp" />
-    <ClCompile Include="Person.cpp" />
-    <ClCompile Include="Subjects.cpp" />
+    <ClCompile Include="..\..\Classes 5\Classes 5\Date.cpp" />
+    <ClCompile Include="..\..\Classes 5\Classes 5\FullName.cpp" />
+    <ClCompile Include="..\..\Classes 5\Classes 5\Person.cpp" />
+    <ClCompile Include="..\..\Classes 5\Classes 5\Subjects.cpp" />
+    <ClCompile Include="Classes 8.cpp" />
+    <ClCompile Include="Dialog.cpp" />
+    <ClCompile Include="Group.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Date.h" />
-    <ClInclude Include="FullName.h" />
-    <ClInclude Include="Grade.h" />
-    <ClInclude Include="Person.h" />
-    <ClInclude Include="Student.h" />
-    <ClInclude Include="Subjects.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClInclude Include="..\..\Classes 5\Classes 5\Date.h" />
+    <ClInclude Include="..\..\Classes 5\Classes 5\FullName.h" />
+    <ClInclude Include="..\..\Classes 5\Classes 5\Grade.h" />
+    <ClInclude Include="..\..\Classes 5\Classes 5\Object.h" />
+    <ClInclude Include="..\..\Classes 5\Classes 5\Person.h" />
+    <ClInclude Include="..\..\Classes 5\Classes 5\Student.h" />
+    <ClInclude Include="..\..\Classes 5\Classes 5\Subjects.h" />
+    <ClInclude Include="Dialog.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="Group.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

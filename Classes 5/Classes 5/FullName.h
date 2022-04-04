@@ -6,6 +6,10 @@
 class FullName
 {
 public:
+    FullName() { surname_ = ""; forename_ = ""; patronym_ = ""; }
+    FullName(std::string surname, std::string forename, std::string patronym) :
+        surname_(surname), forename_(forename), patronym_(patronym) {}
+
     void setSurname(const std::string&);
     void setForename(const std::string&);
     void setPatronym(const std::string&);

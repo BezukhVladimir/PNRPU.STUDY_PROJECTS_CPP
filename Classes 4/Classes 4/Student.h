@@ -1,10 +1,10 @@
+#pragma once
+
 #include "Person.h"
 #include "Subjects.h"
 
 class Student : public Person
 {
-private:
-	Subjects subjects_;
+public:
+	Subjects subjects;
 };
-
-	

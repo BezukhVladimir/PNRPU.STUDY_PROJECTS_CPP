@@ -28,3 +28,21 @@ std::ostream& operator<<(std::ostream& output, const Subjects& subjects)
 
     return output;
 }
+
+std::istream& operator>>(std::istream& input, Subjects& subjects)
+{
+    std::cout << "How many subjects do you want to add? Enter: ";
+
+    size_t how_many; std::cin >> how_many;
+
+    std::string subject; int grade;
+    while (how_many--)
+    {
+        std::cout << "Enter subject: "; std::cin >> subject;
+        std::cout << "Enter grade: "; std::cin >> grade;
+
+        subjects.addSubject(subject, static_cast<Grade>(grade));
+    }
+
+    return input;
+}

@@ -13,18 +13,17 @@
 
 /*
 * Developed by Bezukh Vladimir
-* Classes 4
-* ИВТ-21-2б
+* Classes 8
+* ИВТ-21-2б 
 */
 
-#include "Student.h"
+#include "Dialog.h"
+#include <iostream>
 
 int main()
 {
-	Student Bezukh;
-	Bezukh.subjects.addSubject("Mathematics", Grade::GOOD);
-	Bezukh.subjects.addSubject("Descriptive geometry", Grade::EXCELLENT);
-	Bezukh.subjects.addSubject("Computer science", Grade::EXCELLENT);
+    setlocale(LC_ALL, "Russian");
 
-	std::cout << Bezukh.subjects;
+    Dialog D;
+    D.execute();
 }

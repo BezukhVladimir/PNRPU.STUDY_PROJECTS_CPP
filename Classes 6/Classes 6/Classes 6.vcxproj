@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ac3dbc43-74b9-4b59-82b5-9f648b0fb560}</ProjectGuid>
-    <RootNamespace>Classes_4</RootNamespace>
+    <ProjectGuid>{7910a251-5433-41e8-82f2-676c013a513c}</ProjectGuid>
+    <RootNamespace>Classes_6</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,22 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Classes 4.cpp" />
-    <ClCompile Include="Date.cpp" />
-    <ClCompile Include="FullName.cpp" />
-    <ClCompile Include="Person.cpp" />
-    <ClCompile Include="Subjects.cpp" />
+    <ClCompile Include="Classes 6.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Date.h" />
-    <ClInclude Include="FullName.h" />
-    <ClInclude Include="Grade.h" />
-    <ClInclude Include="Person.h" />
-    <ClInclude Include="Student.h" />
-    <ClInclude Include="Subjects.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClInclude Include="SinglyList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
