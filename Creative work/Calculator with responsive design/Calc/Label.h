@@ -15,7 +15,7 @@ public:
 protected:
 	Font font_;
 	Point2D coord_;
-	Text text_; // отображаемый текст
+	Text text_;
 
 public:
 	Label(Point2D coord = Point2D(), string str = DEFAULT_LABEL_DATA) {
