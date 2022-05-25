@@ -3,7 +3,7 @@
 #include "Object.h"
 #include "Date.h"
 #include "FullName.h"
-#include "..\..\Classes 8\Classes 8\Event.h"
+#include "..\..\8. Event handling\Classes 8\Event.h"
 #include <iostream>
 
 class Person : public Object

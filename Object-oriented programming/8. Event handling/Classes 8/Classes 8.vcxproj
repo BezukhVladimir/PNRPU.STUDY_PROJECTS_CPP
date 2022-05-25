@@ -139,22 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Classes 5\Classes 5\Date.cpp" />
-    <ClCompile Include="..\..\Classes 5\Classes 5\FullName.cpp" />
-    <ClCompile Include="..\..\Classes 5\Classes 5\Person.cpp" />
-    <ClCompile Include="..\..\Classes 5\Classes 5\Subjects.cpp" />
+    <ClCompile Include="..\..\5. Polymorphism\Classes 5\Date.cpp" />
+    <ClCompile Include="..\..\5. Polymorphism\Classes 5\FullName.cpp" />
+    <ClCompile Include="..\..\5. Polymorphism\Classes 5\Person.cpp" />
+    <ClCompile Include="..\..\5. Polymorphism\Classes 5\Subjects.cpp" />
     <ClCompile Include="Classes 8.cpp" />
     <ClCompile Include="Dialog.cpp" />
     <ClCompile Include="Group.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Classes 5\Classes 5\Date.h" />
-    <ClInclude Include="..\..\Classes 5\Classes 5\FullName.h" />
-    <ClInclude Include="..\..\Classes 5\Classes 5\Grade.h" />
-    <ClInclude Include="..\..\Classes 5\Classes 5\Object.h" />
-    <ClInclude Include="..\..\Classes 5\Classes 5\Person.h" />
-    <ClInclude Include="..\..\Classes 5\Classes 5\Student.h" />
-    <ClInclude Include="..\..\Classes 5\Classes 5\Subjects.h" />
+    <ClInclude Include="..\..\5. Polymorphism\Classes 5\Date.h" />
+    <ClInclude Include="..\..\5. Polymorphism\Classes 5\FullName.h" />
+    <ClInclude Include="..\..\5. Polymorphism\Classes 5\Grade.h" />
+    <ClInclude Include="..\..\5. Polymorphism\Classes 5\Object.h" />
+    <ClInclude Include="..\..\5. Polymorphism\Classes 5\Person.h" />
+    <ClInclude Include="..\..\5. Polymorphism\Classes 5\Subjects.h" />
     <ClInclude Include="Dialog.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="Group.h" />

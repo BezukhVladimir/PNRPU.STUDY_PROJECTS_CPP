@@ -1,7 +1,7 @@
 #pragma once
-#include "../../Classes 5/Classes 5/Object.h"
-#include "../../Classes 5/Classes 5/Person.h"
-#include "../../Classes 5/Classes 5/Student.h"
+#include "../../5. Polymorphism/Classes 5/Object.h"
+#include "../../5. Polymorphism/Classes 5/Person.h"
+#include "../../5. Polymorphism/Classes 5/Student.h"
 
 class Group
 {

@@ -26,12 +26,11 @@
 template <typename T>
 void setInteger(T& data, const int& index, const int& integer)
 {
-	int a = data[0];
-
 	if (std::is_arithmetic_v<decltype(data[0])>)
-		data.insert(index, integer);
+		data.insert(index, std::to_string(integer));
 	else
-		throw Error("This is non-numbers type container!"); // throm 1;
+		throw
+		Error("This is non-numbers type container!"); // throm 1;
 }
 
 int main()
@@ -42,17 +41,15 @@ int main()
 	numbers.pushBack(1);
 	strings.pushBack("string");
 
-	try
+	/*try
 	{
 		setInteger(numbers, 0, 21);
-	}
+	}*/
 
-	/*
 	try
 	{
-		setNumber(strings, 0, 21);
+		setInteger(strings, 0, 21);
 	}
-	*/
 
 	catch (Error& error)
 	{
@@ -61,9 +58,9 @@ int main()
 
 	catch (int)
 	{
-		std::cout << "This is non-numbers type container!";
+		std::cout << "This is non-numbers type container!" << std::endl;
 	}
 
-	std::cout << numbers[0] << std::endl;
+	std::cout << std::endl << numbers[0] << std::endl;
 	std::cout << strings[0];
 }
