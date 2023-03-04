@@ -23,11 +23,11 @@
 #include <unordered_map>
 
 // good suffix heuristic
-std::vector<int> prefix_func(const std::string& text) 
-{
+std::vector<int> prefix_func(const std::string& text) {
 	std::vector<int> prefix(text.length());
 
-	int k = 0; prefix[0] = 0;
+	int k = 0;
+	prefix[0] = 0;
 	for (int i = 1; i != text.length(); ++i) 
 	{
 		while (k > 0 && text[k] != text[i])
@@ -42,8 +42,7 @@ std::vector<int> prefix_func(const std::string& text)
 	return prefix;
 }
 
-std::vector<int> find(std::string& text, std::string& pattern) 
-{
+std::vector<int> find(std::string& text, std::string& pattern) {
 	if (text.length() < pattern.length())
 		return std::vector<int>(1, -1);
 
@@ -76,15 +75,21 @@ std::vector<int> find(std::string& text, std::string& pattern)
 		int position = pattern.length() - 1;
 
 		while (pattern[position] == text[position + shift]) {
-			if (position == 0) { shifts.emplace_back(shift); break; }
+			if (position == 0) {
+				shifts.emplace_back(shift);
+				break;
+			}
+			
 			--position;
 		}
 
-		if (position == pattern.length() - 1) {
+		if (pattern.length() != 1 && position == pattern.length() - 1) {
 			TStopTable::const_iterator stop_symbol = stop_table.find(text[position + shift]);
 			int stop_symbol_additional = position - (stop_symbol != stop_table.end() ? stop_symbol->second : -1);
 			shift += stop_symbol_additional;
-		} else shift += suffics_table[pattern.length() - 1 - position];
+		} else {
+			shift += suffics_table[pattern.length() - 1 - position];
+		}
 	}
 
 	if (!shifts.empty())
